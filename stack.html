@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Stack</title>
+    <script>
+      let data = [];
+      let currentSize = data.length;
+      let max = 5;
+      function push(newVal) {
+        if (currentSize >= max) {
+          alert("Stack is full you can not add" + newVal);
+        }
+        data[currentSize] = newVal;
+        currentSize += 1;
+      }
+      function pop() {
+        if (currentSize > 0) {
+          currentSize -= 1;
+          data.length = currentSize;
+        } else {
+          alert("Stack is Empty");
+        }
+      }
+      push(20);
+      push(30);
+      push(2);
+      push(23);
+      push(34);
+      pop();
+      pop();
+      pop();
+      pop();
+      
+      console.log(data);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      function getInsert() {
+        let data = [12, 23, 45, 78, 90, 88];
+        let position = document.getElementById("position").value;
+        let newEl = document.getElementById("newEl").value;
+
+        for (let i = data.length - 1; i >= 0; i--) {
+          console.log(data[i]);
+
+          if (i >= position) {
+            data[i + 1] = data[i];
+            if (i == position) {
+              data[i] = newEl;
+            }
+          }
+        }
+        console.log(data);
+      }
+    </script>
+    <title>Insertion Array</title>
+  </head>
+
+  <body>
+    <input type="text" id="position" placeholder="position" />
+    <input type="text" id="newEl" placeholder="Value" />
+
+    <button onclick="getInsert()">Click</button>
+  </body>
+</html>

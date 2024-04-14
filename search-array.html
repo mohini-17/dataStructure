@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Search Array</title>
+    <script>
+      //   let data = [20, 40, 60, 5, 10, 70, 80, 99, 70];
+      //   let item = 99;
+      //   let index = undefined;
+      //   for (let i = 0; i < data.length - 1; i++) {
+      //     if (data[i] === item) {
+      //       index = i;
+      //       break;
+      //     }
+      //   }
+      //   console.log(index);
+
+      function serachEl() {
+        let data = [20, 40, 60, 5, 10, 70, 80, 99, 70];
+        let item = document.getElementById("search").value;
+        let index = [];
+        for (let i = 0; i < data.length - 1; i++) {
+          if (data[i] == item) {
+            index.push(i);
+            break;
+          }
+        }
+        console.log(index);
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="search" placeholder="searchindex" />
+    <button onclick="serachEl()">Search</button>
+  </body>
+</html>
